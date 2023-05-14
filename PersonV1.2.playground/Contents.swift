@@ -105,7 +105,8 @@ class Pathfinder{
                     emptyField[person.id] = "Город"
                 }
             }
-            if person.address.streetName == ""
+// Поле улица
+          if person.address.streetName == ""
             {
                 if emptyField[person.id] != nil { // здесь я проверяю, были ли уже пустые поля у конкретного Человека
                     message.append(emptyField[person.id] ?? "") // добавляю в сообщение название предыдущего филда
@@ -116,7 +117,8 @@ class Pathfinder{
                     emptyField[person.id] = "Улица"
                 }
             }
-            if person.address.buldingNumber == ""
+//Поле номер дома          
+          if person.address.buldingNumber == ""
             {
                 if emptyField[person.id] != nil { // здесь я проверяю, были ли уже пустые поля у конкретного Человека
                     message.append(emptyField[person.id] ?? "") // добавляю в сообщение название предыдущего филда
@@ -127,7 +129,8 @@ class Pathfinder{
                     emptyField[person.id] = "Номер дома"
                 }
             }
-            if person.address.floor == ""
+// поле этаж
+          if person.address.floor == ""
             {
                 if emptyField[person.id] != nil { // здесь я проверяю, были ли уже пустые поля у конкретного Человека
                     message.append(emptyField[person.id] ?? "") // добавляю в сообщение название предыдущего филда
@@ -138,7 +141,8 @@ class Pathfinder{
                     emptyField[person.id] = "Этаж"
                 }
             }
-            if person.address.apartment == ""
+//поле квартира
+          if person.address.apartment == ""
             {
                 if emptyField[person.id] != nil { // здесь я проверяю, были ли уже пустые поля у конкретного Человека
                     message.append(emptyField[person.id] ?? "") // добавляю в сообщение название предыдущего филда
@@ -161,6 +165,6 @@ class Pathfinder{
     
     }
     
-var N = Generator(N: 100)
-N.GenPersonality()
+var N = Generator(N: 100) // в этой переменной задается количество новых объектов. Код достаточно тяжелый так как я подставляла большие значения и он долго расчитывал
+N.GenPersonality() // здесь я ображаюсь к методу генерации Человек, внутри него уже вызывается обработчик
 
